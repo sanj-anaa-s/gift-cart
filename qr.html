@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment QR Code Generator</title>
+    <!-- Include QRCode.js library -->
+    <script src="https://cdn.jsdelivr.net/npm/qrcode@1.5.1/build/qrcode.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+        #qrcode {
+            margin: 20px auto;
+            width: 200px;
+        }
+        input, button {
+            padding: 10px;
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Payment QR Code Generator</h1>
+    
+    <div>
+        <label for="upiId">Enter UPI ID:</label>
+        <input type="text" id="upiId" placeholder="e.g., yourname@upi" value="yourname@upi">
+        <button onclick="generateQR()">Generate QR Code</button>
+    </div>
+    
+    <div id="qrcode"></div>
+    <p>Scan the QR code to pay via UPI.</p>
+
+    <script>
+        function generateQR() {
+            const upiId = document.getElementById('upiId').value.trim();
+            if (!upiId) {
+                alert("Please enter a UPI ID!");
+                return;
+            }
+
+            // Format UPI payment link
+            const upiLink = `upi://pay?pa=${upiId}&pn=RecipientName&cu=INR`;
+            
+            // Clear previous QR code
+            document.getElementById('qrcode').innerHTML = '';
+            
+            // Generate new QR code
+            QRCode.toCanvas(
+                upiLink,
+                { width: 200 },
+                function (error, canvas) {
+                    if (error) {
+                        console.error(error);
+                        alert("Failed to generate QR code!");
+                    } else {
+                        document.getElementById('qrcode').appendChild(canvas);
+                    }
+                }
+            );
+        }
+
+        // Generate default QR on page load
+        window.onload = generateQR;
+    </script>
+</body>
+</html>

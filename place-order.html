@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Confirmation</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background-color: #f5f5f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .confirmation-container {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            padding: 40px;
+            max-width: 600px;
+            width: 100%;
+            text-align: center;
+            animation: fadeIn 0.5s ease-in-out;
+        }
+
+        .checkmark {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 20px;
+            position: relative;
+        }
+
+        .checkmark-circle {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            background-color: #4CAF50;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .checkmark-icon {
+            color: white;
+            font-size: 50px;
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 15px;
+            font-size: 28px;
+        }
+
+        p {
+            color: #666;
+            margin-bottom: 25px;
+            line-height: 1.6;
+        }
+
+        .order-details {
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 25px 0;
+            text-align: left;
+        }
+
+        .order-details h3 {
+            margin-bottom: 15px;
+            color: #444;
+        }
+
+        .detail-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .detail-row:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .detail-label {
+            color: #777;
+            font-weight: 500;
+        }
+
+        .detail-value {
+            color: #333;
+            font-weight: 600;
+        }
+
+        .continue-btn {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin-top: 10px;
+        }
+
+        .continue-btn:hover {
+            background-color: #45a049;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-20px);
+            }
+            60% {
+                transform: translateY(-10px);
+            }
+        }
+
+        .bounce {
+            animation: bounce 1s;
+        }
+    </style>
+</head>
+<body>
+    <div class="confirmation-container">
+        <div class="checkmark">
+            <div class="checkmark-circle">
+                <div class="checkmark-icon">✓</div>
+            </div>
+        </div>
+        <h1>Order Placed Successfully!</h1>
+        <p>Thank you for your purchase. Your order has been confirmed and will be processed shortly.</p>
+        
+        <div class="order-details">
+            <h3>Order Summary</h3>
+            <div class="detail-row">
+                <span class="detail-label">Order Number:</span>
+                <span class="detail-value" id="order-number">#123456</span>
+            </div>
+            <div class="detail-row">
+                <span class="detail-label">Date:</span>
+                <span class="detail-value" id="order-date">May 15, 2023</span>
+            </div>
+            <div class="detail-row">
+                <span class="detail-label">Total Amount:</span>
+                <span class="detail-value" id="order-total">$129.99</span>
+            </div>
+            <div class="detail-row">
+                <span class="detail-label">Payment Method:</span>
+                <span class="detail-value" id="payment-method">Credit Card</span>
+            </div>
+            <div class="detail-row">
+                <span class="detail-label">Delivery Address:</span>
+                <span class="detail-value" id="delivery-address">123 Main St, Cityville, 12345</span>
+            </div>
+        </div>
+        
+        <p>You'll receive a confirmation email shortly. For any questions, contact our support team.</p>
+        <a href="./index.html" style="text-decoration: none;"><button class="continue-btn" id="continue-btn">Continue Shopping</button></a>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Generate a random order number
+            const orderNumber = '#' + Math.floor(100000 + Math.random() * 900000);
+            document.getElementById('order-number').textContent = orderNumber;
+            
+            // Set current date
+            const today = new Date();
+            const options = { year: 'numeric', month: 'long', day: 'numeric' };
+            document.getElementById('order-date').textContent = today.toLocaleDateString('en-US', options);
+            
+            // Add bounce animation to checkmark on load
+            const checkmark = document.querySelector('.checkmark');
+            setTimeout(() => {
+                checkmark.classList.add('bounce');
+            }, 300);
+            
+            // Continue button functionality
+            document.getElementById('continue-btn').addEventListener('click', function() {
+                alert('Redirecting you back to the store...');
+                // In a real application, you would redirect to the store homepage
+                // window.location.href = '/';
+            });
+            
+            // You could also fetch order details from a backend or URL parameters
+            // For example:
+            /*
+            const urlParams = new URLSearchParams(window.location.search);
+            const orderTotal = urlParams.get('total');
+            if (orderTotal) {
+                document.getElementById('order-total').textContent = '$' + orderTotal;
+            }
+            */
+        });
+    </script>
+</body>
+</html>

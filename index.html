@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GiftCart - All in One</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" type="image/x-icon" href="./logo.png">
+</head>
+<body>
+    <!-- Navigation Tabs -->
+    <div class="container-fluid bg-dark">
+        <div class="container">
+            <ul class="nav nav-tabs justify-content-center" id="myTab" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button">Home</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="login-tab" data-bs-toggle="tab" data-bs-target="#login" type="button">Login</button>
+                </li>
+                <!-- <li class="nav-item" role="presentation">
+                    <a href="./signup.html" class="nav-link" style="text-decoration: none;">Sign Up</a>
+                </li> -->
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="cart-tab" data-bs-toggle="tab" data-bs-target="#cart" type="button">Cart</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="payment-tab" data-bs-toggle="tab" data-bs-target="#payment" type="button">Payment</button>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Tab Content -->
+    <div class="tab-content" id="myTabContent">
+        <!-- Home Section -->
+        <div class="tab-pane fade show active" id="home" role="tabpanel">
+            <!-- Hero Section -->
+            <header class="hero-section">
+                <div class="container text-center py-5">
+                    <h1 class="display-4 fw-bold">Find the Perfect Gift</h1>
+                    <p class="lead">Thoughtful presents for every occasion and everyone in your life</p>
+                    <div class="search-bar mt-4">
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" placeholder="Search for gifts...">
+                            <button class="btn btn-danger" type="button">Search</button>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Featured Categories -->
+            <section class="py-5">
+                <div class="container">
+                    <h2 class="text-center mb-5">Shop by Category</h2>
+                    <div class="row g-4">
+                        <div class="col-md-3">
+                            <div class="category-card">
+                                <img src="https://images.unsplash.com/photo-1530103862676-de8c9debad1d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Birthday Gifts" class="img-fluid rounded">
+                                <div class="category-overlay">
+                                    <h3>Birthday Gifts</h3>
+                                    <a href="./Online Bday Gifts _ Unique Happy Birthday Gift Ideas 2022.mhtml" class="btn btn-sm btn-primary">Shop Now</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="category-card">
+                                <img src="https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Anniversary Gifts" class="img-fluid rounded">
+                                <div class="category-overlay">
+                                    <h3>Anniversary</h3>
+                                    <a href="./Best Marriage_Wedding Anniversary Gift Online at Giftcart.mhtml" class="btn btn-sm btn-primary">Shop Now</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="category-card">
+                                <img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Wedding Gifts" class="img-fluid rounded">
+                                <div class="category-overlay">
+                                    <h3>Wedding Gifts</h3>
+                                    <a href="./Personalized Wedding Gifts & Customised wedding Gifts _ Giftcart.mhtml" class="btn btn-sm btn-primary">Shop Now</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="category-card">
+                                <img src="./house warming.jpeg" alt="Valentine's Day" class="img-fluid rounded">
+                                <div class="category-overlay">
+                                    <h3>House Warming Gifts</h3>
+                                    <a href="./Housewarming Gifts _ Gifts For Housewarming _ Buy Online Housewarming Gifts _ Send Housewarming Gifts to India -Giftcart.com.mhtml" class="btn btn-sm btn-primary">Shop Now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Featured Products -->
+            <section class="py-5 bg-light">
+                <div class="container">
+                    <h2 class="text-center mb-5">Featured Gifts</h2>
+                    <div class="row g-4">
+                        <div class="col-md-3">
+                            <div class="card product-card">
+                                <img src="./watch.png" class="card-img-top" alt="Personalized Jewelry">
+                                <div class="card-body">
+                                    <h5 class="card-title">Watches</h5>
+                                    <p class="card-text text-muted">Rs.300</p>
+                                    <button class="btn btn-primary btn-sm">Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="card product-card">
+                                <img src="./teddy.png" class="card-img-top" alt="Custom Mug">
+                                <div class="card-body">
+                                    <h5 class="card-title">Teddy Bear</h5>
+                                    <p class="card-text text-muted">Rs.500</p>
+                                    <button class="btn btn-primary btn-sm">Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="card product-card">
+                                <img src="./fun.jpeg" class="card-img-top" alt="Gift Box">
+                                <div class="card-body">
+                                    <h5 class="card-title">Aesthetic Cameras</h5>
+                                    <p class="card-text text-muted">Rs.2000</p>
+                                    <button class="btn btn-primary btn-sm">Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="card product-card">
+                                <img src="./self-care.jpeg" class="card-img-top" alt="Teddy Bear">
+                                <div class="card-body">
+                                    <h5 class="card-title">Self-Care Kit</h5>
+                                    <p class="card-text text-muted">Rs.1500</p>
+                                    <button class="btn btn-primary btn-sm">Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="card product-card">
+                                <img src="https://www.igp.com/blog/wp-content/uploads/2024/06/Personalized-gift-items-for-sister-and-brother-in-law.webp" class="card-img-top" alt="Personalized Jewelry">
+                                <div class="card-body">
+                                    <h5 class="card-title">Photo Frame</h5>
+                                    <p class="card-text text-muted">Rs.300</p>
+                                    <button class="btn btn-primary btn-sm">Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="card product-card">
+                                <img src="./necklace.jpeg" class="card-img-top" alt="Custom Mug">
+                                <div class="card-body">
+                                    <h5 class="card-title">Personalized Name Necklace</h5>
+                                    <p class="card-text text-muted">Rs.500</p>
+                                    <button class="btn btn-primary btn-sm">Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="card product-card">
+                                <img src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" class="card-img-top" alt="Gift Box">
+                                <div class="card-body">
+                                    <h5 class="card-title">Personalized Name Rings</h5>
+                                    <p class="card-text text-muted">Rs.300</p>
+                                    <button class="btn btn-primary btn-sm">Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="card product-card">
+                                <img src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1587&q=80" class="card-img-top" alt="Teddy Bear">
+                                <div class="card-body">
+                                    <h5 class="card-title">Handbags</h5>
+                                    <p class="card-text text-muted">Rs.5000</p>
+                                    <button class="btn btn-primary btn-sm">Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Login Section -->
+        <div class="tab-pane fade" id="login" role="tabpanel">
+            <div class="container my-5">
+                <div class="row justify-content-center">
+                    <div class="col-md-6">
+                        <div class="card">
+                            <div class="card-body p-5">
+                                <div class="text-center mb-4">
+                                    <h2>Welcome Back</h2>
+                                    <p>Sign in to your Gift Gallery account</p>
+                                </div>
+                                
+                                <form>
+                                    <div class="mb-3">
+                                        <label for="email" class="form-label">Email address</label>
+                                        <input type="email" class="form-control" id="email" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="password" class="form-label">Password</label>
+                                        <input type="password" class="form-control" id="password" required>
+                                    </div>
+                                    <div class="mb-3 form-check">
+                                        <input type="checkbox" class="form-check-input" id="remember">
+                                        <label class="form-check-label" for="remember">Remember me</label>
+                                    </div>
+                                    <button type="submit" class="btn btn-primary w-100">Login</button>
+                                </form>
+                                
+                                <div class="text-center mt-3">
+                                    <a href="#">Forgot password?</a>
+                                </div>
+                                
+                                <div class="divider my-4 text-center position-relative">
+                                    <span class="bg-white px-2">OR</span>
+                                </div>
+                                
+                                <button class="btn btn-outline-secondary w-100 mb-2">
+                                    <i class="bi bi-google"></i> Continue with Google
+                                </button>
+                                <button class="btn btn-outline-secondary w-100">
+                                    <i class="bi bi-facebook"></i> Continue with Facebook
+                                </button>
+                                
+                                <div class="text-center mt-4">
+                                    <p>New to Gift Gallery? <a href="./signup.html">Create an account</a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Cart Section -->
+        <div class="tab-pane fade" id="cart" role="tabpanel">
+            <div class="container my-5">
+                <h1 class="mb-4">Your Shopping Cart</h1>
+                
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="card mb-3">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between align-items-center mb-3">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="selectAll" checked>
+                                        <label class="form-check-label" for="selectAll">Select all items</label>
+                                    </div>
+                                    <button class="btn btn-sm btn-outline-danger">Remove Selected</button>
+                                </div>
+                                
+                                <!-- Cart Items -->
+                                <div class="cart-item">
+                                    <div class="row align-items-center">
+                                        <div class="col-2">
+                                            <input class="form-check-input" type="checkbox" checked>
+                                        </div>
+                                        <div class="col-3">
+                                            <img src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Product" class="img-fluid rounded">
+                                        </div>
+                                        <div class="col-4">
+                                            <h5>Personalized Name Necklace</h5>
+                                            <p class="text-muted">Gold, Custom Name</p>
+                                            <div class="quantity-selector d-flex align-items-center">
+                                                <button class="btn btn-sm btn-outline-secondary">-</button>
+                                                <span class="px-3">1</span>
+                                                <button class="btn btn-sm btn-outline-secondary">+</button>
+                                            </div>
+                                        </div>
+                                        <div class="col-3 text-end">
+                                            <p class="fw-bold">Rs.550</p>
+                                            <button class="btn btn-sm btn-link text-danger">Remove</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <hr>
+                                
+                                <div class="cart-item">
+                                    <div class="row align-items-center">
+                                        <div class="col-2">
+                                            <input class="form-check-input" type="checkbox" checked>
+                                        </div>
+                                        <div class="col-3">
+                                            <img src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1587&q=80" alt="Product" class="img-fluid rounded">
+                                        </div>
+                                        <div class="col-4">
+                                            <h5>Custom Photo Mug</h5>
+                                            <p class="text-muted">White, 11oz</p>
+                                            <div class="quantity-selector d-flex align-items-center">
+                                                <button class="btn btn-sm btn-outline-secondary">-</button>
+                                                <span class="px-3">2</span>
+                                                <button class="btn btn-sm btn-outline-secondary">+</button>
+                                            </div>
+                                        </div>
+                                        <div class="col-3 text-end">
+                                            <p class="fw-bold">Rs.60.98</p>
+                                            <button class="btn btn-sm btn-link text-danger">Remove</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Gift Options</h5>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="giftWrap">
+                                    <label class="form-check-label" for="giftWrap">Add gift wrapping (+Rs.45.69)</label>
+                                </div>
+                                <div class="mt-2">
+                                    <label for="giftMessage" class="form-label">Gift Message (optional)</label>
+                                    <textarea class="form-control" id="giftMessage" rows="3"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Order Summary</h5>
+                                <div class="d-flex justify-content-between">
+                                    <p>Subtotal (2 items)</p>
+                                    <p>Rs.690.00</p>
+                                </div>
+                                <div class="d-flex justify-content-between">
+                                    <p>Shipping</p>
+                                    <p>Rs.45.98</p>
+                                </div>
+                                <div class="d-flex justify-content-between">
+                                    <p>Gift Wrapping</p>
+                                    <p>Rs.6.8</p>
+                                </div>
+                                <hr>
+                                <div class="d-flex justify-content-between fw-bold">
+                                    <p>Total</p>
+                                    <p>Rs.660.09</p>
+                                </div>
+                                <button class="btn btn-primary w-100 mt-3" onclick="document.getElementById('payment-tab').click()">Proceed to Checkout</button>
+                                <div class="text-center mt-2">
+                                    <small class="text-muted">or <a href="#" onclick="document.getElementById('home-tab').click()">Continue Shopping</a></small>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="card mt-3">
+                            <div class="card-body">
+                                <h5 class="card-title">Promo Code</h5>
+                                <div class="input-group mb-3">
+                                    <input type="text" class="form-control" placeholder="Enter promo code">
+                                    <button class="btn btn-outline-secondary" type="button">Apply</button>
+                                </div>
+                                <p class="text-success">HOLIDAY20 applied - 20% off</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Payment Section -->
+        <div class="tab-pane fade" id="payment" role="tabpanel">
+            <div class="container my-5">
+                <div class="row">
+                    <div class="col-md-8">
+                        <!-- <div class="checkout-steps mb-4">
+                            <div class="step completed">
+                                <span class="step-number">1</span>
+                                <span class="step-title">Cart</span>
+                            </div>
+                            <div class="step completed">
+                                <span class="step-number">2</span>
+                                <span class="step-title">Shipping</span>
+                            </div>
+                            <div class="step active">
+                                <span class="step-number">3</span>
+                                <span class="step-title">Payment</span>
+                            </div>
+                            <div class="step">
+                                <span class="step-number">4</span>
+                                <span class="step-title">Confirmation</span>
+                            </div>
+                        </div> -->
+                        
+                        <h2 class="mb-4">Payment Method</h2>
+                        
+                        <div class="card mb-4">
+                            <div class="card-body">
+                                <div class="payment-methods">
+                                    <div class="form-check mb-3">
+                                        <input class="form-check-input" type="radio" name="paymentMethod" id="creditCard" checked>
+                                        <label class="form-check-label" for="creditCard">
+                                            Credit/Debit Card
+                                        </label>
+                                    </div>
+                                    
+                                    <div id="creditCardForm">
+                                        <div class="mb-3">
+                                            <label for="cardNumber" class="form-label">Card Number</label>
+                                            <input type="text" class="form-control" id="cardNumber" placeholder="1234 5678 9012 3456">
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6 mb-3">
+                                                <label for="expiryDate" class="form-label">Expiry Date</label>
+                                                <input type="text" class="form-control" id="expiryDate" placeholder="MM/YY">
+                                            </div>
+                                            <div class="col-md-6 mb-3">
+                                                <label for="cvv" class="form-label">CVV</label>
+                                                <input type="text" class="form-control" id="cvv" placeholder="123">
+                                            </div>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="nameOnCard" class="form-label">Name on Card</label>
+                                            <input type="text" class="form-control" id="nameOnCard" placeholder="John Doe">
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="form-check mb-3">
+                                        <input class="form-check-input" type="radio" name="paymentMethod" id="paypal">
+                                        <label class="form-check-label" for="paypal">
+                                            <img src="https://www.paypalobjects.com/webstatic/en_US/i/buttons/PP_logo_h_100x26.png" alt="PayPal" style="height: 26px; margin-left: 10px;">
+                                        </label>
+                                    </div>
+                                    
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="paymentMethod" id="applePay">
+                                        <label class="form-check-label" for="applePay">
+                                            <img src="data:image/png;base64,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" alt="Apple Pay" style="height: 26px; margin-left: 10px;">
+                                        </label>
+                                    </div>
+
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="paymentMethod" id="applePay">
+                                        <label class="form-check-label" for="QRCode">
+                                            <img src="./qrcode.jpg" alt="QR Code" style="height: 100px; width: 100px; margin-left: 10px;">
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="card mb-4">
+                            <div class="card-body">
+                                <h5 class="card-title">Billing Address</h5>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="sameAsShipping" checked>
+                                    <label class="form-check-label" for="sameAsShipping">Same as shipping address</label>
+                                </div>
+                                
+                                <div id="billingAddressForm" class="mt-3" style="display: none;">
+                                    <div class="row">
+                                        <div class="col-md-6 mb-3">
+                                            <label for="billingFirstName" class="form-label">First Name</label>
+                                            <input type="text" class="form-control" id="billingFirstName">
+                                        </div>
+                                        <div class="col-md-6 mb-3">
+                                            <label for="billingLastName" class="form-label">Last Name</label>
+                                            <input type="text" class="form-control" id="billingLastName">
+                                        </div>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="billingAddress" class="form-label">Address</label>
+                                        <input type="text" class="form-control" id="billingAddress">
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-4 mb-3">
+                                            <label for="billingCity" class="form-label">City</label>
+                                            <input type="text" class="form-control" id="billingCity">
+                                        </div>
+                                        <div class="col-md-4 mb-3">
+                                            <label for="billingState" class="form-label">State</label>
+                                            <select class="form-select" id="billingState">
+                                                <option selected>Choose...</option>
+                                                <option>California</option>
+                                                <option>New York</option>
+                                                <option>Texas</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-4 mb-3">
+                                            <label for="billingZip" class="form-label">Zip</label>
+                                            <input type="text" class="form-control" id="billingZip">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="d-flex justify-content-between">
+                            <button class="btn btn-outline-secondary" onclick="document.getElementById('cart-tab').click()">Back to Cart</button>
+                            <!-- <a href="./place-order.html" style="text-decoration: none;"> -->
+                                <!-- <button class="btn btn-primary">Place Order</button> -->
+                            <!-- </a> -->
+                            <button class="btn btn-primary" onclick="validateAndNavigate()">Place Order</button>
+
+                            <script>
+                            function validateAndNavigate() {
+                                // 1. Check if any payment method is selected
+                                const paymentMethod = document.querySelector('input[name="paymentMethod"]:checked');
+                                
+                                if (!paymentMethod) {
+                                    alert('Please select a payment method');
+                                    return false;
+                                }
+                            
+                                // 2. If credit card is selected, validate those fields
+                                if (paymentMethod.id === 'creditCard') {
+                                    const cardNumber = document.getElementById('cardNumber')?.value.replace(/\s/g, '') || '';
+                                    const expiryDate = document.getElementById('expiryDate')?.value || '';
+                                    const nameOnCard = document.getElementById('nameOnCard')?.value.trim() || '';
+                                    
+                                    // Card number validation (16 digits)
+                                    if (!/^\d{16}$/.test(cardNumber)) {
+                                        alert('Please enter a valid 16-digit card number');
+                                        return false;
+                                    }
+                                    
+                                    // Expiry date validation (MM/YY format)
+                                    if (!/^\d{2}\/\d{2}$/.test(expiryDate)) {
+                                        alert('Please enter expiry date in MM/YY format');
+                                        return false;
+                                    }
+                                    
+                                    // Name on card validation
+                                    if (nameOnCard === '') {
+                                        alert('Please enter name on card');
+                                        return false;
+                                    }
+                                }
+                                
+                                // 3. If all validations pass, navigate to order page
+                                window.location.href = "./place-order.html";
+                                return true;
+                            }
+                            </script>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Order Summary</h5>
+                                <div class="order-items">
+                                    <div class="d-flex justify-content-between mb-2">
+                                        <span>Personalized Name Necklace x1</span>
+                                        <span>Rs.220.87</span>
+                                    </div>
+                                    <div class="d-flex justify-content-between mb-2">
+                                        <span>Custom Photo Mug x2</span>
+                                        <span>Rs.550</span>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="d-flex justify-content-between">
+                                    <p>Subtotal</p>
+                                    <p>Rs.5400.99</p>
+                                </div>
+                                <div class="d-flex justify-content-between">
+                                    <p>Shipping</p>
+                                    <p>Rs.40.99</p>
+                                </div>
+                                <div class="d-flex justify-content-between">
+                                    <p>Gift Wrapping</p>
+                                    <p>Rs.6.00</p>
+                                </div>
+                                <div class="d-flex justify-content-between text-success">
+                                    <p>Discount (HOLIDAY20)</p>
+                                    <p>-Rs.200.99</p>
+                                </div>
+                                <hr>
+                                <div class="d-flex justify-content-between fw-bold">
+                                    <p>Total</p>
+                                    <p>Rs.5500</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="card mt-3">
+                            <div class="card-body">
+                                <h5 class="card-title">Shipping Information</h5>
+                                <p>John Doe<br>
+                                123 Main St<br>
+                                Apt 4B<br>
+                                New York, NY 10001<br>
+                                United States<br>
+                                Phone: (555) 123-4567</p>
+                                <button class="btn btn-sm btn-outline-secondary">Change</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-5 mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>GiftCart</h5>
+                    <p>Making gift-giving easy and memorable since 2010.</p>
+                </div>
+                <div class="col-md-2">
+                    <h5>Shop</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white">All Gifts</a></li>
+                        <li><a href="#" class="text-white">New Arrivals</a></li>
+                        <li><a href="#" class="text-white">Best Sellers</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-2">
+                    <h5>Help</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white">Contact Us</a></li>
+                        <li><a href="#" class="text-white">FAQs</a></li>
+                        <li><a href="#" class="text-white">Shipping</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Newsletter</h5>
+                    <p>Subscribe for gift ideas and special offers</p>
+                    <div class="input-group">
+                        <input type="email" class="form-control" placeholder="Your email">
+                        <button class="btn btn-primary" type="button">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Toggle billing address form
+        document.getElementById('sameAsShipping').addEventListener('change', function() {
+            document.getElementById('billingAddressForm').style.display = 
+                this.checked ? 'none' : 'block';
+        });
+        
+        // Simulate adding to cart from home page
+        document.querySelectorAll('.product-card button').forEach(button => {
+            button.addEventListener('click', function() {
+                alert('Item added to cart!');
+                // In a real app, you would update the cart count here
+            });
+        });
+    </script>
+</body>
+</html>
